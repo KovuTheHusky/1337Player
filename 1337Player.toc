@@ -1,0 +1,11 @@
+## Interface: 40300
+## Title: 1337Player
+## Notes: Allows you to place the elite, rare elite, rare, or normal graphic around your character portrait. (/leetplayer, /lp)
+## SavedVariablesPerCharacter: LeetPlayerTexture, LeetPlayerTextureRed, LeetPlayerTextureGreen, LeetPlayerTextureBlue, LeetPlayerPetX, LeetPlayerPetY, LeetPlayerPlayerX, LeetPlayerPlayerY
+## Author: KovuTheHusky
+## Version: 3.0.40300
+## X-Email: kovuthehusky@gmail.com
+## X-Website: http://codeski.com/
+## X-Feedback: http://codeski.com/
+## X-Category: UnitFrames
+1337Player.xml

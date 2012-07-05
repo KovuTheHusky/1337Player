@@ -1,0 +1,228 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+
+<Script file="1337Player.lua"/>
+
+<Frame name="LeetPlayerFrame" toplevel="true" parent="UIParent" frameStrata="DIALOG" hidden="true" enableMouse="true">
+
+<Scripts>
+<onLoad function="LeetPlayerOnLoad"></onLoad>
+<onEvent function="LeetPlayerOnEvent"></onEvent>
+</Scripts>
+
+<Size><AbsDimension x="430" y="300"/></Size>
+<Anchors><Anchor point="CENTER"/></Anchors>
+
+<Frames>
+
+<Button name="LeetPlayerFrameClose" inherits="OptionsButtonTemplate" text="Close">
+<Anchors>
+<Anchor point="BOTTOMRIGHT">
+<Offset><AbsDimension x="-12" y="13"/></Offset>
+</Anchor>
+</Anchors>
+<Scripts>
+<OnClick>LeetPlayerFrame:Hide();</OnClick>
+</Scripts>
+</Button>
+
+<Button name="LeetPlayerFrameDefaults" inherits="OptionsButtonTemplate" text="Defaults">
+<Anchors>
+<Anchor point="BOTTOMRIGHT">
+<Offset><AbsDimension x="-102" y="13"/></Offset>
+</Anchor>
+</Anchors>
+<Scripts>
+<OnClick>LeetPlayerFrameDefaults_OnClick();</OnClick>
+</Scripts>
+</Button>
+
+<CheckButton name="LeetPlayerFrameElite" inherits="OptionsCheckButtonTemplate">
+<Anchors>
+<Anchor point="TOPLEFT" relativeTo="LeetPlayerFrame">
+<Offset><AbsDimension x="20" y="-50"/></Offset>
+</Anchor>
+</Anchors>
+<Scripts>
+<OnLoad>getglobal(self:GetName().."Text"):SetText("Elite Graphic");</OnLoad>
+<OnClick>LeetPlayerFrameElite_OnClick();</OnClick>
+</Scripts>
+</CheckButton>
+
+<CheckButton name="LeetPlayerFrameElite2" inherits="OptionsCheckButtonTemplate">
+<Anchors>
+<Anchor point="TOPLEFT" relativeTo="LeetPlayerFrameElite">
+<Offset><AbsDimension x="0" y="-30"/></Offset>
+</Anchor>
+</Anchors>
+<Scripts>
+<OnLoad>getglobal(self:GetName().."Text"):SetText("Rare Elite Graphic");</OnLoad>
+<OnClick>LeetPlayerFrameElite2_OnClick();</OnClick>
+</Scripts>
+</CheckButton>
+
+<CheckButton name="LeetPlayerFrameRare" inherits="OptionsCheckButtonTemplate">
+<Anchors>
+<Anchor point="TOPLEFT" relativeTo="LeetPlayerFrameElite2">
+<Offset><AbsDimension x="0" y="-30"/></Offset>
+</Anchor>
+</Anchors>
+<Scripts>
+<OnLoad>getglobal(self:GetName().."Text"):SetText("Rare Graphic");</OnLoad>
+<OnClick>LeetPlayerFrameRare_OnClick();</OnClick>
+</Scripts>
+</CheckButton>
+
+<CheckButton name="LeetPlayerFrameNormal" inherits="OptionsCheckButtonTemplate">
+<Anchors>
+<Anchor point="TOPLEFT" relativeTo="LeetPlayerFrameRare">
+<Offset><AbsDimension x="0" y="-30"/></Offset>
+</Anchor>
+</Anchors>
+<Scripts>
+<OnLoad>getglobal(self:GetName().."Text"):SetText("Normal Graphic");</OnLoad>
+<OnClick>LeetPlayerFrameNormal_OnClick();</OnClick>
+</Scripts>
+</CheckButton>
+
+<Slider name="LeetPlayerFramePlayerX" inherits="OptionsSliderTemplate">
+<Size>
+<AbsDimension x="220" y="16"/>
+</Size>
+<Anchors>
+<Anchor point="TOPLEFT" relativeTo="LeetPlayerFrame">
+<Offset><AbsDimension x="180" y="-60"/></Offset>
+</Anchor>
+</Anchors>
+<Scripts>
+<OnLoad>
+getglobal(self:GetName().."Text"):SetText("X-Axis Offset");
+getglobal(self:GetName().."High"):SetText("+100");
+getglobal(self:GetName().."Low"):SetText("-100");
+self:SetMinMaxValues(-100,100);
+self:SetValueStep(1);
+</OnLoad>
+<OnValueChanged>LeetPlayerFramePlayer_OnClick();</OnValueChanged>
+</Scripts>
+</Slider>
+
+<Slider name="LeetPlayerFramePlayerY" inherits="OptionsSliderTemplate">
+<Size>
+<AbsDimension x="220" y="16"/>
+</Size>
+<Anchors>
+<Anchor point="TOPLEFT" relativeTo="LeetPlayerFramePlayerX">
+<Offset><AbsDimension x="0" y="-40"/></Offset>
+</Anchor>
+</Anchors>
+<Scripts>
+<OnLoad>
+getglobal(self:GetName().."Text"):SetText("Y-Axis Offset");
+getglobal(self:GetName().."High"):SetText("+100");
+getglobal(self:GetName().."Low"):SetText("-100");
+self:SetMinMaxValues(-100,100);
+self:SetValueStep(1);
+</OnLoad>
+<OnValueChanged>LeetPlayerFramePlayer_OnClick();</OnValueChanged>
+</Scripts>
+</Slider>
+
+<Slider name="LeetPlayerFramePetX" inherits="OptionsSliderTemplate">
+<Size>
+<AbsDimension x="220" y="16"/>
+</Size>
+<Anchors>
+<Anchor point="TOPLEFT" relativeTo="LeetPlayerFrame">
+<Offset><AbsDimension x="180" y="-170"/></Offset>
+</Anchor>
+</Anchors>
+<Scripts>
+<OnLoad>
+getglobal(self:GetName().."Text"):SetText("X-Axis Offset");
+getglobal(self:GetName().."High"):SetText("+100");
+getglobal(self:GetName().."Low"):SetText("-100");
+self:SetMinMaxValues(-100,100);
+self:SetValueStep(1);
+</OnLoad>
+<OnValueChanged>LeetPlayerFramePet_OnClick();</OnValueChanged>
+</Scripts>
+</Slider>
+
+<Slider name="LeetPlayerFramePetY" inherits="OptionsSliderTemplate">
+<Size>
+<AbsDimension x="220" y="16"/>
+</Size>
+<Anchors>
+<Anchor point="TOPLEFT" relativeTo="LeetPlayerFramePetX">
+<Offset><AbsDimension x="0" y="-40"/></Offset>
+</Anchor>
+</Anchors>
+<Scripts>
+<OnLoad>
+getglobal(self:GetName().."Text"):SetText("Y-Axis Offset");
+getglobal(self:GetName().."High"):SetText("+100");
+getglobal(self:GetName().."Low"):SetText("-100");
+self:SetMinMaxValues(-100,100);
+self:SetValueStep(1);
+</OnLoad>
+<OnValueChanged>LeetPlayerFramePet_OnClick();</OnValueChanged>
+</Scripts>
+</Slider>
+
+</Frames>
+
+<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+<BackgroundInsets>
+<AbsInset left="11" right="12" top="12" bottom="11"/>
+</BackgroundInsets>
+<TileSize><AbsValue val="32"/></TileSize>
+<EdgeSize><AbsValue val="32"/></EdgeSize>
+</Backdrop>
+
+<Layers>
+<Layer level="ARTWORK">
+<Texture file="Interface\DialogFrame\UI-DialogBox-Header">
+<Size><AbsDimension x="256" y="64"/></Size>
+<Anchors>
+<Anchor point="TOP">
+<Offset><AbsDimension x="0" y="12"/></Offset>
+</Anchor>
+</Anchors>
+</Texture>
+</Layer>
+<Layer level="OVERLAY">
+<FontString inherits="GameFontNormal" text="1337Player">
+<Anchors>
+<Anchor point="TOP" relativeTo="LeetPlayerFrame">
+<Offset><AbsDimension x="0" y="-2"/></Offset>
+</Anchor>
+</Anchors>
+</FontString>
+<FontString inherits="GameFontNormal" text="Player Texture">
+<Anchors>
+<Anchor point="TOPLEFT" relativeTo="LeetPlayerFrame">
+<Offset><AbsDimension x="20" y="-30"/></Offset>
+</Anchor>
+</Anchors>
+</FontString>
+<FontString inherits="GameFontNormal" text="Player Frame">
+<Anchors>
+<Anchor point="TOPLEFT" relativeTo="LeetPlayerFrame">
+<Offset><AbsDimension x="180" y="-30"/></Offset>
+</Anchor>
+</Anchors>
+</FontString>
+<FontString inherits="GameFontNormal" text="Pet Frame">
+<Anchors>
+<Anchor point="TOPLEFT" relativeTo="LeetPlayerFrame">
+<Offset><AbsDimension x="180" y="-140"/></Offset>
+</Anchor>
+</Anchors>
+</FontString>
+</Layer>
+</Layers>
+
+</Frame>
+
+</Ui>
