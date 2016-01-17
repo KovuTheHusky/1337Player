@@ -1,10 +1,8 @@
-1337Player
-====================
+# 1337Player
 
 Allows you to place the elite, rare elite, rare, or normal graphic around your character portrait in World of Warcraft.
 
-License
---------------------
+## License
 
 Copyright © 2013 Kevin Breslin
 
