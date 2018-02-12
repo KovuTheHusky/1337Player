@@ -5,7 +5,7 @@
 ## Author: KovuTheHusky
 ## Version: 3.0.40300
 ## X-Email: kovuthehusky@gmail.com
-## X-Website: http://codeski.com/
-## X-Feedback: http://codeski.com/
+## X-Website: https://kovuthehusky.com/projects#1337player
+## X-Feedback: https://github.com/KovuTheHusky/1337Player/issues
 ## X-Category: UnitFrames
 1337Player.xml
