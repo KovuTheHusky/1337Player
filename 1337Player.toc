@@ -4,7 +4,7 @@
 ## SavedVariablesPerCharacter: LeetPlayerTexture, LeetPlayerTextureRed, LeetPlayerTextureGreen, LeetPlayerTextureBlue, LeetPlayerPetX, LeetPlayerPetY, LeetPlayerPlayerX, LeetPlayerPlayerY
 ## Author: KovuTheHusky
 ## Version: 3.0.40300
-## X-Website: https://kovuthehusky.com/projects#1337player
+## X-Website: https://github.com/KovuTheHusky/1337Player
 ## X-Feedback: https://github.com/KovuTheHusky/1337Player/issues
 ## X-Category: UnitFrames
 1337Player.xml
